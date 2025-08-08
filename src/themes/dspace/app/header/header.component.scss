@@ -6,12 +6,12 @@
     position: relative; // Ensure mobile menu positions correctly
 
     .container {
-      padding: 0.5rem 1rem;
+      padding: 0.25rem 1rem; // Reduced padding for smaller header
     }
 
     .navbar-brand img.tholkudi-logo {
-      height: 70px; // Increased from 50px
-      max-width: 280px; // Increased from 200px
+      height: 45px; // Reduced for laptop view
+      max-width: 200px; // Reduced for laptop view
       object-fit: contain;
     }
 
@@ -20,9 +20,9 @@
       background-color: #2b4878; // Blue background color
       color: white !important;
       text-decoration: none;
-      padding: 8px 16px;
-      border-radius: 20px; // Rounded corners
-      font-size: 14px;
+      padding: 6px 12px; // Reduced padding for smaller buttons
+      border-radius: 16px; // Slightly smaller radius
+      font-size: 12px; // Smaller font size
       font-weight: bold;
       display: inline-flex;
       align-items: center;
@@ -40,21 +40,21 @@
     // User controls wrapper styling with #229daf background
     .user-controls-wrapper {
       background-color: #229daf; // Teal background color
-      border-radius: 20px; // Rounded corners
-      padding: 4px 8px;
+      border-radius: 16px; // Smaller radius
+      padding: 2px 6px; // Reduced padding
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px; // Smaller gap
 
       // Style the login text to have white background (first position)
       ::ng-deep ds-auth-nav-menu {
         .btn, .dropdown-toggle, a {
           background-color: white !important;
           color: #333 !important;
-          border-radius: 16px !important; // Slightly smaller radius for inner element
-          padding: 4px 12px !important;
+          border-radius: 12px !important; // Smaller radius
+          padding: 3px 8px !important; // Reduced padding
           border: none !important;
-          font-size: 14px !important;
+          font-size: 12px !important; // Smaller font
           font-weight: bold !important;
 
           &:hover, &:focus {
@@ -71,7 +71,7 @@
           background-color: transparent !important;
           color: white !important;
           border: none !important;
-          font-size: 14px !important;
+          font-size: 12px !important; // Smaller font
           font-weight: bold !important;
 
           &:hover, &:focus {
