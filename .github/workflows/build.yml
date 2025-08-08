@@ -3,8 +3,8 @@
 # https://docs.github.com/en/free-pro-team@latest/actions/guides/building-and-testing-nodejs
 name: Build
 
-# Run this Build for all pushes / PRs to current branch
-on: [push, pull_request]
+# Run this Build for PRs or when triggered manually
+on: [pull_request, workflow_dispatch]
 
 permissions:
   contents: read  # to fetch code (actions/checkout)

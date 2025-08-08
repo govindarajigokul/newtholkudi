@@ -2,15 +2,9 @@
 # the branch specified in a "port to" label (if exists)
 name: Port merged Pull Request
 
-# Only run for merged PRs against the "main" or maintenance branches
-# We allow this to run for `pull_request_target` so that github secrets are available
-# (This is required when the PR comes from a forked repo)
+# Disable automatic triggers; allow manual runs only
 on:
-  pull_request_target:
-    types: [ closed ]
-    branches:
-      - main
-      - 'dspace-**'
+  workflow_dispatch:
 
 permissions:
   contents: write      # so action can add comments

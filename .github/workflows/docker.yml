@@ -1,19 +1,9 @@
 # DSpace Docker image build for hub.docker.com
 name: Docker images
 
-# Run this Build for all pushes to 'main' or maintenance branches, or tagged releases.
-# Also run for PRs to ensure PR doesn't break Docker build process
-# NOTE: uses "reusable-docker-build.yml" in DSpace/DSpace to actually build each of the Docker images
-# https://github.com/DSpace/DSpace/blob/main/.github/workflows/reusable-docker-build.yml
-# 
+# Disable automatic triggers; allow manual runs only
 on:
-  push:
-    branches:
-      - main
-      - 'dspace-**'
-    tags:
-      - 'dspace-**'
-  pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read  # to fetch code (actions/checkout)
