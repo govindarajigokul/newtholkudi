@@ -3,10 +3,6 @@
 // imports the base global style
 @import '../../../styles/_global-styles.scss';
 
-// Ensure single golden border between header and hero banner
-header {
-  border-bottom: 3px solid #eca43c !important;
-}
 
 // Ensure hero banner sits flush at top
 ds-hero-banner {
