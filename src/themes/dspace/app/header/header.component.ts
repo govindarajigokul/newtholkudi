@@ -5,6 +5,7 @@ import {
 import {
   Component,
   OnInit,
+  HostListener,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
@@ -52,5 +53,24 @@ export class HeaderComponent extends BaseComponent implements OnInit {
    */
   closeMobileMenu(): void {
     this.isMobileMenuOpen = false;
+  }
+
+  /**
+   * Close mobile menu when clicking outside
+   */
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event): void {
+    const target = event.target as HTMLElement;
+    const mobileNavMenu = document.getElementById('mobile-nav-menu');
+    const hamburgerButton = document.querySelector('.navbar-toggler');
+
+    // Close menu if clicking outside the mobile nav menu and not on the hamburger button
+    if (this.isMobileMenuOpen &&
+        mobileNavMenu &&
+        !mobileNavMenu.contains(target) &&
+        hamburgerButton &&
+        !hamburgerButton.contains(target)) {
+      this.isMobileMenuOpen = false;
+    }
   }
 }
