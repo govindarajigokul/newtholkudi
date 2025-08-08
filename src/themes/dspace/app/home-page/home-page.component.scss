@@ -1,0 +1,58 @@
+// DSpace Theme Home Page Styles
+
+:host {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// Hero Banner Section - flush with top, no spacing
+ds-hero-banner {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+// Main content spacing
+.container {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+// Search form styling
+ds-search-form {
+  display: block;
+  margin-bottom: 2rem;
+  
+  @media (max-width: 767px) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+// Community list styling
+ds-top-level-community-list {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+// Recent items styling
+ds-recent-item-list {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+// Home news styling
+ds-home-news {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+// Responsive adjustments
+@media (max-width: 767px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

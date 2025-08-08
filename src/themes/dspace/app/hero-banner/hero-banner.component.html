@@ -1,0 +1,42 @@
+<div class="hero-banner-container" 
+     (mouseenter)="onMouseEnter()" 
+     (mouseleave)="onMouseLeave()">
+  
+  <!-- Hero Banner Slider -->
+  <div class="hero-slider">
+    <div class="hero-slides"
+         [style.transform]="'translateX(-' + (currentSlide * 20) + '%)'">
+      <div class="hero-slide"
+           *ngFor="let image of heroImages; let i = index"
+           [class.active]="i === currentSlide">
+        <img [src]="image"
+             [alt]="'Hero Banner ' + (i + 1)"
+             class="hero-image"
+             loading="lazy">
+      </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <button class="hero-nav hero-nav-prev" 
+            (click)="prevSlide()"
+            [attr.aria-label]="'Previous slide'">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    
+    <button class="hero-nav hero-nav-next" 
+            (click)="nextSlide()"
+            [attr.aria-label]="'Next slide'">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+
+    <!-- Slide Indicators (Dots) -->
+    <div class="hero-indicators">
+      <button class="hero-indicator" 
+              *ngFor="let image of heroImages; let i = index"
+              [class.active]="i === currentSlide"
+              (click)="goToSlide(i)"
+              [attr.aria-label]="'Go to slide ' + (i + 1)">
+      </button>
+    </div>
+  </div>
+</div>
