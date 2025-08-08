@@ -10,8 +10,8 @@
     }
 
     .navbar-brand img.tholkudi-logo {
-      height: 50px;
-      max-width: 200px;
+      height: 70px; // Increased from 50px
+      max-width: 280px; // Increased from 200px
       object-fit: contain;
     }
 
@@ -354,6 +354,28 @@
       .nav-button {
         font-size: 12px;
         padding: 6px 12px;
+      }
+
+      // Mobile logo size adjustments
+      .navbar-brand img.tholkudi-logo {
+        height: 55px; // Slightly smaller on mobile but still larger than before
+        max-width: 220px;
+      }
+    }
+
+    // Tablet adjustments
+    @media (min-width: 769px) and (max-width: 991.98px) {
+      .navbar-brand img.tholkudi-logo {
+        height: 65px;
+        max-width: 260px;
+      }
+    }
+
+    // Large desktop adjustments
+    @media (min-width: 1200px) {
+      .navbar-brand img.tholkudi-logo {
+        height: 80px; // Even larger on big screens
+        max-width: 320px;
       }
     }
   }
