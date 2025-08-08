@@ -32,8 +32,25 @@ import { ImpersonateNavbarComponent } from '../../../../app/shared/impersonate-n
 export class HeaderComponent extends BaseComponent implements OnInit {
   public isNavBarCollapsed$: Observable<boolean>;
 
+  // Mobile menu state
+  isMobileMenuOpen = false;
+
   ngOnInit() {
     super.ngOnInit();
     this.isNavBarCollapsed$ = this.menuService.isMenuCollapsed(this.menuID);
+  }
+
+  /**
+   * Toggle mobile menu visibility
+   */
+  toggleMobileMenu(): void {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+  /**
+   * Close mobile menu
+   */
+  closeMobileMenu(): void {
+    this.isMobileMenuOpen = false;
   }
 }
