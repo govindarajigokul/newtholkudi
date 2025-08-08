@@ -25,12 +25,12 @@
   padding-top: 0 !important;
 }
 
-// Hero Banner Section - flush with top, no spacing
+// Hero Banner Section - full width at top
 ds-hero-banner {
   display: block;
+  width: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
 }
 
 // COAR Component - add top spacing after hero banner

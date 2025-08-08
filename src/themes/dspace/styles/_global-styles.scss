@@ -8,10 +8,18 @@ header {
   border-bottom: 3px solid #eca43c !important;
 }
 
-// Remove any conflicting borders from hero banner
-ds-hero-banner,
-.hero-banner-container,
+// Ensure hero banner sits flush at top
+ds-hero-banner {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+.hero-container,
 .hero-slider {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
   border-top: none !important;
   border-bottom: none !important;
 }
