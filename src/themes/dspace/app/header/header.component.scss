@@ -15,6 +15,15 @@
 
   img#header-logo {
     height: var(--ds-header-logo-height);
+    max-width: 200px;
+    width: auto;
+  }
+
+  @media (max-width: 767.98px) {
+    img#header-logo {
+      max-width: 150px;
+      max-height: 40px;
+    }
   }
 
   button#navbar-toggler {
