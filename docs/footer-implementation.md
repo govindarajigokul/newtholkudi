@@ -32,9 +32,10 @@ src/
 ## Layout Structure
 
 ### Column 1: Logo
-- Displays the main application logo
+- Displays the main application logo (dspace-logo.svg)
 - Links to the home page
 - Responsive sizing (60px desktop, 50px mobile)
+- Vertically centered on desktop, horizontally centered on mobile
 
 ### Column 2: Contact Us
 - Organization address and contact information
@@ -65,9 +66,10 @@ src/
 
 ### Desktop (≥768px)
 - 4-column layout using Bootstrap grid
-- Left-aligned content in columns 1-3
-- Right-aligned content in column 4
-- Social icons aligned left in column 4
+- Logo vertically and horizontally centered in column 1
+- Left-aligned content in columns 2-3
+- Left-aligned content in column 4 with social icons
+- All columns vertically aligned
 
 ### Mobile (<768px)
 - Single column layout
@@ -155,22 +157,26 @@ Update the media queries in the SCSS file to modify breakpoints or responsive be
 
 ## Testing Checklist
 
-- [ ] Footer displays correctly on desktop
-- [ ] Footer is responsive on mobile devices
-- [ ] All links are functional
-- [ ] Social media icons display and have hover effects
-- [ ] Colors match the specification
-- [ ] Accessibility features work properly
-- [ ] Footer integrates properly with the overall application layout
+- [x] Footer displays correctly on desktop
+- [x] Footer is responsive on mobile devices
+- [x] Logo is centered on mobile and properly aligned on desktop
+- [x] All links are functional
+- [x] Social media icons display and have hover effects
+- [x] Colors match the specification (#f1f1e9, #b02127, #41566d, #9e6646)
+- [x] Accessibility features work properly
+- [x] Footer integrates properly with the overall application layout
+- [x] Rounded underlines on headings implemented
+- [x] 4-column layout working correctly
 
 ## Troubleshooting
 
 ### Common Issues
 
-1. **Icons not displaying**: Check file paths in the HTML template
+1. **Icons not displaying**: Check file paths in the HTML template (should be .svg, not .png)
 2. **Styling not applied**: Verify SCSS compilation and CSS loading
-3. **Responsive issues**: Check Bootstrap grid classes and media queries
-4. **Color inconsistencies**: Ensure color codes match the specification
+3. **Logo alignment issues**: Check Bootstrap flexbox classes (align-items-center, justify-content-center)
+4. **Responsive issues**: Check Bootstrap grid classes and media queries
+5. **Color inconsistencies**: Ensure color codes match the specification
 
 ### Debug Steps
 
