@@ -56,6 +56,10 @@ ds-hero-banner {
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 
   // No overlay - let the background image show clearly
 
@@ -184,7 +188,8 @@ ds-hero-banner {
 // Main content spacing
 .container {
   padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 0 !important; // Remove bottom padding to eliminate gap
+  margin-bottom: 0 !important; // Remove bottom margin to eliminate gap
 }
 
 // Search form styling
@@ -200,13 +205,39 @@ ds-search-form {
 // Community list styling (Tribal Languages Section)
 ds-top-level-community-list {
   display: block;
-  margin-bottom: 0; // Remove bottom margin to eliminate space above footer
+  margin-bottom: 0 !important; // Remove bottom margin to eliminate space above footer
+  padding-bottom: 0 !important; // Remove bottom padding to eliminate space above footer
 }
 
 // Home news styling
 ds-home-news {
   display: block;
-  margin-bottom: 0; // Remove margin to connect with bottom border
+  margin-bottom: 0 !important; // Remove margin to connect with bottom border
+  padding-bottom: 0 !important; // Remove padding to connect with bottom border
+}
+
+// Remove any gaps between main content and footer
+::ng-deep .my-cs {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+// Ensure no gap between main content and footer
+::ng-deep main {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+// Remove any default spacing from the page wrapper
+::ng-deep .page-content {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+// Ensure the home page component has no bottom spacing
+:host {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 // Responsive adjustments
@@ -214,5 +245,7 @@ ds-home-news {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
   }
 }
