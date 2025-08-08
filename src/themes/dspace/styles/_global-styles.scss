@@ -3,6 +3,19 @@
 // imports the base global style
 @import '../../../styles/_global-styles.scss';
 
+// Ensure single golden border between header and hero banner
+header {
+  border-bottom: 3px solid #eca43c !important;
+}
+
+// Remove any conflicting borders from hero banner
+ds-hero-banner,
+.hero-banner-container,
+.hero-slider {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
 .facet-filter, .setting-option, .advanced-search {
   background-color: var(--bs-light);
   border-radius: var(--bs-border-radius);
