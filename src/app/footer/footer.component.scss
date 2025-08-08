@@ -146,15 +146,17 @@
 
       // Center the logo column in mobile
       .col-12:first-child {
-        text-align: center;
+        text-align: center !important;
         margin-bottom: 1rem;
 
-        .d-flex {
-          justify-content: center;
+        &.d-flex {
+          justify-content: center !important;
+          align-items: center !important;
         }
 
         .navbar-brand {
-          margin: 0;
+          margin: 0 auto !important;
+          display: block !important;
         }
       }
     }
