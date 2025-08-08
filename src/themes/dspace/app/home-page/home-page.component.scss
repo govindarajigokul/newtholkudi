@@ -7,12 +7,37 @@
   padding: 0;
 }
 
+// Override main container margins globally
+::ng-deep .my-cs {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+// Target specific Angular container classes
+::ng-deep .my-cs.ng-tns-c2190221462-0 {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+// Remove any top spacing from main content area
+::ng-deep main {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
 // Hero Banner Section - flush with top, no spacing
 ds-hero-banner {
   display: block;
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+// COAR Component - add top spacing after hero banner
+ds-home-coar {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 // Main content spacing

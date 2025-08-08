@@ -1,8 +1,28 @@
 :host {
   display: block;
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   width: 100%;
+  position: relative;
+  top: 0;
+}
+
+// Override main container margins that cause spacing
+:host-context(.my-cs) {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+// Target the main Angular container element
+::ng-deep .my-cs {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+// More specific targeting for the main container
+::ng-deep .my-cs.ng-tns-c2190221462-0 {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 .hero-banner-container {
