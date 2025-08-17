@@ -191,17 +191,31 @@
 }
 
 @media (max-width: 768px) {
+  .hero-container {
+    margin: 0;
+    padding: 0;
+  }
+
   .hero-slider {
-    height: 308px; // Mobile height to match 400x308 mobile images
-    max-width: 400px; // Limit width to image width
-    margin: 0 auto; // Center the slider
+    height: 250px; // Set a minimum height to ensure images show
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-slide {
+    margin: 0;
+    padding: 0;
   }
 
   .hero-image {
-    object-fit: contain; // Show full mobile image without cropping
+    object-fit: cover; // Fill the container completely
     object-position: center center; // Center the mobile image
     width: 100%;
-    height: 100%;
+    height: 100%; // Full height of container
+    display: block;
+    margin: 0;
+    padding: 0;
   }
 
   .hero-prev,

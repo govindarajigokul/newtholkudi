@@ -72,7 +72,11 @@ export class HeroBannerComponent implements OnInit, OnDestroy {
    */
   @HostListener('window:resize', ['$event'])
   checkScreenSize(): void {
-    this.isMobile = window.innerWidth <= 768;
+    if (typeof window !== 'undefined') {
+      this.isMobile = window.innerWidth <= 768;
+      // Reset current slide when switching between mobile/desktop
+      this.currentSlide = 0;
+    }
   }
 
   /**
