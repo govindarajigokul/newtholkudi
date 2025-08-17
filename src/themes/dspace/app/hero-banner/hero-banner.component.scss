@@ -192,7 +192,16 @@
 
 @media (max-width: 768px) {
   .hero-slider {
-    height: 250px; // Mobile height
+    height: 308px; // Mobile height to match 400x308 mobile images
+    max-width: 400px; // Limit width to image width
+    margin: 0 auto; // Center the slider
+  }
+
+  .hero-image {
+    object-fit: contain; // Show full mobile image without cropping
+    object-position: center center; // Center the mobile image
+    width: 100%;
+    height: 100%;
   }
 
   .hero-prev,
