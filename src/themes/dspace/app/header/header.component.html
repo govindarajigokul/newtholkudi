@@ -20,11 +20,14 @@
           </a>
 
           <!-- Tamil Nadu Tribes Button (simple link) -->
-          <a routerLink="/community-list" class="nav-button"
+          <a routerLink="/community-list" class="nav-button me-2"
              [attr.aria-label]="'Tamil Nadu Tribes'"
              role="menuitem">
             Tamil Nadu Tribes
           </a>
+
+          <!-- Search Icon - between Tamil Nadu Tribes and login buttons -->
+          <ds-search-navbar class="search-navbar-wrapper"></ds-search-navbar>
         </div>
 
         <!-- Desktop User controls - visible on desktop only -->
@@ -35,11 +38,16 @@
           <ds-impersonate-navbar></ds-impersonate-navbar>
         </div>
 
-        <!-- Mobile controls - language translator and hamburger -->
+        <!-- Mobile controls - language translator, search icon, and hamburger -->
         <div class="d-md-none d-flex align-items-center">
-          <!-- Language translator - visible on mobile, left of hamburger -->
+          <!-- Language translator - visible on mobile, left of search -->
           <div class="mobile-lang-switch me-2">
             <ds-lang-switch></ds-lang-switch>
+          </div>
+
+          <!-- Search Icon - between translator and hamburger -->
+          <div class="mobile-search-icon me-2">
+            <ds-search-navbar class="mobile-header-search"></ds-search-navbar>
           </div>
 
           <!-- Mobile hamburger button -->
@@ -71,6 +79,7 @@
              (click)="closeMobileMenu()">
             Tamil Nadu Tribes
           </a>
+
 
           <!-- Login as navigation link -->
           <div class="mobile-auth-nav-wrapper">

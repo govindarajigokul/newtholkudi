@@ -378,5 +378,62 @@
         max-width: 320px;
       }
     }
+
+    // Search navbar styling
+    .search-navbar-wrapper {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+
+      ::ng-deep ds-search-navbar {
+        display: flex;
+        align-items: center;
+
+        .search-toggle-btn,
+        .btn {
+          background: transparent;
+          border: none;
+          color: #2b4878;
+          font-size: 18px;
+          padding: 8px 12px;
+          border-radius: 4px;
+          transition: all 0.3s ease;
+
+          &:hover {
+            background-color: #f8f9fa;
+            color: #1a2d4a;
+          }
+
+          i, .fa, .fas {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    // Mobile search styling
+    .mobile-search-wrapper {
+      margin: 0.5rem 0;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #eee;
+
+      ::ng-deep ds-search-navbar {
+        .search-toggle-btn,
+        .btn {
+          background: transparent;
+          border: none;
+          color: #2b4878;
+          font-size: 16px;
+          padding: 8px 0;
+          width: 100%;
+          text-align: left;
+          border-radius: 0;
+
+          &:hover {
+            background-color: #f8f9fa;
+            color: #1a2d4a;
+          }
+        }
+      }
+    }
   }
 }
