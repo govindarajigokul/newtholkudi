@@ -40,6 +40,7 @@ export class HeaderComponent extends BaseComponent implements OnInit {
 
   // Mobile menu state
   isMobileMenuOpen = false;
+  isMobileBrowseOpen = false;
 
   // Injected services
   private router = inject(Router);
@@ -62,6 +63,14 @@ export class HeaderComponent extends BaseComponent implements OnInit {
    */
   closeMobileMenu(): void {
     this.isMobileMenuOpen = false;
+    this.isMobileBrowseOpen = false; // Also close browse dropdown when main menu closes
+  }
+
+  /**
+   * Toggle mobile browse dropdown
+   */
+  toggleMobileBrowseDropdown(): void {
+    this.isMobileBrowseOpen = !this.isMobileBrowseOpen;
   }
 
   /**

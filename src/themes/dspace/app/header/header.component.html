@@ -93,19 +93,50 @@
       <div class="mobile-nav-content">
         <!-- Navigation Links Section -->
         <div class="mobile-nav-section">
-          <!-- Browse Tholkudi sub-items for mobile -->
+          <!-- Browse Tholkudi dropdown for mobile -->
           <div class="mobile-dropdown-section">
-            <div class="mobile-dropdown-header">Browse Tholkudi</div>
-            <a routerLink="/about-us" class="mobile-nav-link mobile-sub-link"
-               [attr.aria-label]="'About'"
-               (click)="closeMobileMenu()">
-              About
-            </a>
-            <a routerLink="/tribal_lg" class="mobile-nav-link mobile-sub-link"
-               [attr.aria-label]="'Tribal Languages'"
-               (click)="closeMobileMenu()">
-              Tribal Languages
-            </a>
+            <button class="mobile-dropdown-header" 
+                    type="button"
+                    (click)="toggleMobileBrowseDropdown()"
+                    [attr.aria-expanded]="isMobileBrowseOpen"
+                    aria-controls="mobile-browse-dropdown">
+              Browse Tholkudi
+              <span class="dropdown-arrow" [class.rotated]="isMobileBrowseOpen">▼</span>
+            </button>
+            <div class="mobile-dropdown-items" 
+                 id="mobile-browse-dropdown"
+                 [class.show]="isMobileBrowseOpen">
+              <a class="mobile-nav-link mobile-sub-link"
+                 [attr.aria-label]="'browse.comcol.by.author' | translate"
+                 (click)="navigateToBrowse('author'); closeMobileMenu()">
+                {{ 'browse.comcol.by.author' | translate }}
+              </a>
+              <a class="mobile-nav-link mobile-sub-link"
+                 [attr.aria-label]="'browse.comcol.by.title' | translate"
+                 (click)="navigateToBrowse('title'); closeMobileMenu()">
+                {{ 'browse.comcol.by.title' | translate }}
+              </a>
+              <a class="mobile-nav-link mobile-sub-link"
+                 [attr.aria-label]="'browse.comcol.by.subject' | translate"
+                 (click)="navigateToBrowse('subject'); closeMobileMenu()">
+                {{ 'browse.comcol.by.subject' | translate }}
+              </a>
+              <a class="mobile-nav-link mobile-sub-link"
+                 [attr.aria-label]="'browse.comcol.by.language' | translate"
+                 (click)="navigateToBrowse('language'); closeMobileMenu()">
+                {{ 'browse.comcol.by.language' | translate }}
+              </a>
+              <a class="mobile-nav-link mobile-sub-link"
+                 [attr.aria-label]="'browse.comcol.by.media' | translate"
+                 (click)="navigateToBrowse('media'); closeMobileMenu()">
+                {{ 'browse.comcol.by.media' | translate }}
+              </a>
+              <a class="mobile-nav-link mobile-sub-link"
+                 [attr.aria-label]="'browse.comcol.by.linguistictype' | translate"
+                 (click)="navigateToBrowse('linguistictype'); closeMobileMenu()">
+                {{ 'browse.comcol.by.linguistictype' | translate }}
+              </a>
+            </div>
           </div>
 
           <a routerLink="/about-us" class="mobile-nav-link"
