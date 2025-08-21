@@ -303,11 +303,9 @@
         padding: 1rem !important;
         text-align: left !important;
         cursor: pointer !important;
-        border-bottom: 2px solid #eca43c !important;
         transition: all 0.3s ease !important;
 
         &:hover, &:focus {
-          background-color: #f8f9fa !important;
           color: #1a2d4a !important;
         }
 
@@ -326,7 +324,6 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out;
-        background-color: #f8f9fa;
 
         &.show {
           max-height: 400px; // Adjust based on content
@@ -335,7 +332,6 @@
         .mobile-sub-link {
           padding-left: 2rem !important; // Extra indentation for sub-items
           font-size: 14px !important;
-          background-color: #f8f9fa !important;
           border-bottom: 1px solid #ddd !important;
 
           &:hover, &:focus {
