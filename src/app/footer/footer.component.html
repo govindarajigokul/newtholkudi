@@ -39,8 +39,10 @@
           <li><a href="https://tribal.nic.in" target="_blank">Ministry of Tribal Affairs</a></li>
           <li><a href="https://www.tntribalwelfare.tn.gov.in/" target="_blank">TN Tribal Welfare Department</a></li>
           <li><a href="https://tntrc.org.in/" target="_blank">Tribal Research Centre, Tamil Nadu</a></li>
-          <li *ngIf="coarLdnEnabled$ | async">
-            <a routerLink="info/coar-notify-support">
+          <li *ngIf="coarLdnEnabled$ | async" class="notify-enabled">
+            <a routerLink="info/coar-notify-support" class="coar-notify-support-route">
+              <img class="n-coar me-1" src="assets/images/coar-logo.png" alt="COAR Notify" style="height: 16px;" 
+                   onerror="this.style.display='none'">
               {{ 'footer.link.coar-notify-support' | translate }}
             </a>
           </li>
