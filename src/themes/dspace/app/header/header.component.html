@@ -13,17 +13,20 @@
         <!-- Desktop Navigation - visible on desktop only -->
         <div class="d-none d-md-flex align-items-center me-3">
           <!-- Browse Tholkudi Dropdown -->
-          <div class="dropdown me-2">
+          <div class="dropdown me-2" ngbDropdown>
             <button class="nav-button dropdown-toggle" type="button" 
-                    id="browseDropdown" data-bs-toggle="dropdown" 
-                    aria-expanded="false"
+                    id="browseDropdown" ngbDropdownToggle
                     [attr.aria-label]="'Browse Tholkudi'">
               Browse Tholkudi
             </button>
-            <ul class="dropdown-menu" aria-labelledby="browseDropdown">
-              <li><a class="dropdown-item" routerLink="/about-us">About</a></li>
-              <li><a class="dropdown-item" routerLink="/tribal_lg">Tribal Languages</a></li>
-            </ul>
+            <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="browseDropdown">
+              <a class="dropdown-item" (click)="navigateToBrowse('author')">{{ 'browse.comcol.by.author' | translate }}</a>
+              <a class="dropdown-item" (click)="navigateToBrowse('title')">{{ 'browse.comcol.by.title' | translate }}</a>
+              <a class="dropdown-item" (click)="navigateToBrowse('subject')">{{ 'browse.comcol.by.subject' | translate }}</a>
+              <a class="dropdown-item" (click)="navigateToBrowse('language')">{{ 'browse.comcol.by.language' | translate }}</a>
+              <a class="dropdown-item" (click)="navigateToBrowse('media')">{{ 'browse.comcol.by.media' | translate }}</a>
+              <a class="dropdown-item" (click)="navigateToBrowse('linguistictype')">{{ 'browse.comcol.by.linguistictype' | translate }}</a>
+            </div>
           </div>
 
           <!-- About us Button (simple link) -->
