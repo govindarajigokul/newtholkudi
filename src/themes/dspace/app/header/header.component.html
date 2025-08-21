@@ -12,11 +12,32 @@
 
         <!-- Desktop Navigation - visible on desktop only -->
         <div class="d-none d-md-flex align-items-center me-3">
+          <!-- Browse Tholkudi Dropdown -->
+          <div class="dropdown me-2">
+            <button class="nav-button dropdown-toggle" type="button" 
+                    id="browseDropdown" data-bs-toggle="dropdown" 
+                    aria-expanded="false"
+                    [attr.aria-label]="'Browse Tholkudi'">
+              Browse Tholkudi
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="browseDropdown">
+              <li><a class="dropdown-item" routerLink="/about-us">About</a></li>
+              <li><a class="dropdown-item" routerLink="/tribal_lg">Tribal Languages</a></li>
+            </ul>
+          </div>
+
           <!-- About us Button (simple link) -->
           <a routerLink="/about-us" class="nav-button me-2"
              [attr.aria-label]="'About us'"
              role="menuitem">
             About us
+          </a>
+
+          <!-- Tribal Languages Button (simple link) -->
+          <a routerLink="/tribal_lg" class="nav-button me-2"
+             [attr.aria-label]="'Tribal Languages'"
+             role="menuitem">
+            Tribal Languages
           </a>
 
           <!-- Tamil Nadu Tribes Button (simple link) -->
@@ -69,11 +90,33 @@
       <div class="mobile-nav-content">
         <!-- Navigation Links Section -->
         <div class="mobile-nav-section">
+          <!-- Browse Tholkudi sub-items for mobile -->
+          <div class="mobile-dropdown-section">
+            <div class="mobile-dropdown-header">Browse Tholkudi</div>
+            <a routerLink="/about-us" class="mobile-nav-link mobile-sub-link"
+               [attr.aria-label]="'About'"
+               (click)="closeMobileMenu()">
+              About
+            </a>
+            <a routerLink="/tribal_lg" class="mobile-nav-link mobile-sub-link"
+               [attr.aria-label]="'Tribal Languages'"
+               (click)="closeMobileMenu()">
+              Tribal Languages
+            </a>
+          </div>
+
           <a routerLink="/about-us" class="mobile-nav-link"
              [attr.aria-label]="'About us'"
              (click)="closeMobileMenu()">
             About us
           </a>
+
+          <a routerLink="/tribal_lg" class="mobile-nav-link"
+             [attr.aria-label]="'Tribal Languages'"
+             (click)="closeMobileMenu()">
+            Tribal Languages
+          </a>
+
           <a routerLink="/community-list" class="mobile-nav-link"
              [attr.aria-label]="'Tamil Nadu Tribes'"
              (click)="closeMobileMenu()">
