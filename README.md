@@ -288,7 +288,7 @@ E2E tests (aka integration tests) use [Cypress.io](https://www.cypress.io/). Con
 The test files can be found in the `./cypress/integration/` folder.
 
 Before you can run e2e tests, two things are REQUIRED:
-1. You MUST be running the DSpace backend (i.e. REST API) locally. The e2e tests will *NOT* succeed if run against our demo/sandbox REST API (https://demo.dspace.org/server/ or https://sandbox.dspace.org/server/), as those sites may have content added/removed at any time.
+1. You MUST be running the DSpace backend (i.e. REST API) locally. The e2e tests will *NOT* succeed if run against our demo/sandbox REST API (https://demo.dspace.org/server/ or https://tamilimages.in/server/), as those sites may have content added/removed at any time.
     * After starting up your backend on localhost, make sure either your `config.prod.yml` or `config.dev.yml` has its `rest` settings defined to use that localhost backend.
 	* If you'd prefer, you may instead use environment variables as described at [Configuring](#configuring). For example:
        ```
